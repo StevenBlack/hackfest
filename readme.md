@@ -125,15 +125,15 @@ A [Bitmain Antminer S19 Pro (110 TH)](https://www.asicminervalue.com/miners/bitm
 consiming 12,350,000 Watts (12.4 GW) of electrical power.
 
 In comparison, the LG-2 power generating station in Baie James is capable of generating 5,616 MW (5.6 GW) of electrical power.  Which means, the Bitcoin network 
-is presently consuming the equivalent of about 2.2 LG-2 power generating stations.
+is presently consuming **the equivalent of about 2.2 LG-2 power generating stations**.
 
 #### Calculating the electrical power consumption of the Bitcoin network (from financial constraints)
 
 The Bitcoin network presently generates 144 blocks per day, and each block is worth 6.25 BTC plus about 4% in fees.  So the daily reward is about 936 BTC per day.
 
-At a price of $38,500 CAD per BTC, the daily mining reward is worth CAD $36,000,00 per day, or CAD $1.5 million per hour.
+At a price of $38,500 CAD per BTC, the daily mining reward is worth CAD $36,000,000 per day, or CAD $1.5 million per hour.
 
-At a price of 7.8¢/kWh (in Québec), the Bitcoin network would be presently consuming 19.2 GW of electrical power at breakeven.  Which is about 3.5 LG-2 power generating stations.
+At a price of 7.8¢/kWh (in Québec), the Bitcoin network would be presently consuming 19.2 GW of electrical power at breakeven.  Which is **about 3.5 LG-2 power generating stations**.
 
 
 
