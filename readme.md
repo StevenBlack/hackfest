@@ -86,18 +86,22 @@ where we see a real number, or a decimal of any sort. Bitcoin world is all about
 
 You may have heard something to the effect that ***"Bitcoin is at the leading edge of mathematics, cryptography, and computer science"***.  This is a little bit of an overstatement.  
 
-For example, here are some math symbols you won't see in Bitcoin world:
+For example, **here are some math symbols you won't see in Bitcoin**:
 
 ```
 ≈   𝝅   ℯ   i   √   ∂x/∂t   ∫   Σ   ∏   μ   σ   n!   ε   ∞   ÷
 ```
-In fact, you won't see any vectors or matrices either. There are no angles, there is no trig. There are no imaginary numbers.  There are no negative numbers 
-either. There are no fractions.  There are no decimals and no irrational numbers.  Bitcoin's math is actually accessible to anyone who has completed 
-grade 8 mathematics.
 
-As for cryptography, there is nothing encrypled in Bitcoin, so there's nothing to decrypt either. The cryptography primitives used by the Bitcoin network is 
+In fact, you **won't find any vectors** and **no matrices** either. There are **no angles**, there is no **trigonometry**. There are **no imaginary numbers**.  There are **no negative numbers** either. There are **no fractions**.  There are **no decimals** and, therefore, **no irrational** numbers.  
+Bitcoin's math is actually accessible to anyone who has completed grade 8 mathematics.
+
+As for cryptography, **nothing is encrypled** in Bitcoin, so there's **nothing to decrypt** either. The cryptography primitives used by the Bitcoin network is 
 all about hashing and digital signatures, which widely accessible subjects, and certainly not at all "at the leading edge of cryptography."
 ### Hashing, blocks, proof of work, and mining
+
+We esplain the following concepts using [Anders Brownworth's blockchain demo](https://github.com/anders94/blockchain-demo) running locally.
+
+![Anders Brownworth's blockchain demo](assets/Anders-Brownworth-blockchain-demo.png)
 
 ### Bitcoin's heartbeat: Block time, mining difficulty, and mining difficulty adjustments
 
