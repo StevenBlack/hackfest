@@ -129,12 +129,11 @@ is presently consuming **the equivalent of about 2.2 LG-2 power generating stati
 
 #### Calculating the electrical power consumption of the Bitcoin network (from financial constraints)
 
-The Bitcoin network presently generates 144 blocks per day, and each block is worth 6.25 BTC plus about 4% in fees.  So the daily reward is about 936 BTC per day.
+See the caculations in file [btc-energy-use.pdf](btc-energy-use.pdf)
 
-At a price of $38,500 CAD per BTC, the daily mining reward is worth CAD $36,000,000 per day, or CAD $1.5 million per hour.
+In short, global Bitcoin energy use is equivalent to 40-50% of the electrical power production of the province of Quebec.
 
-At a price of 7.8¢/kWh (in Québec), the Bitcoin network would be presently consuming 19.2 GW of electrical power at breakeven.  Which is **about 3.5 LG-2 power generating stations**.
-
+![](assets/btc-vs-Quebec-electricity-production-2019.png)
 
 
 ### Bitcoin's heartbeat: Block time, mining difficulty, and mining difficulty adjustments
