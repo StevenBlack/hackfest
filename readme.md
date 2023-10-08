@@ -19,7 +19,7 @@ is to explain Bitcoin while highlighting its cooler technical facets.
 
 ### Introduction
 
-Here I extemporaneously explain who I am, and why I'm here, and what I'm going to talk about. You had to be there.
+Here I extemporaneously explain who I am, why I'm here, and what I'm going to talk about. You had to be there.
 
 ### Epistemology of Bitcoin (some high level conclusions)
 
@@ -42,13 +42,13 @@ Let's use a **layered graph layout** to visualize the subject prerequisite relat
 
 ![Layered format for the network graph](assets/base-concepts-layered.png)
 
-We can analyze the network graph for cliques. This is interesting, because
-it shows how some concepts are more tightly related than others.  This 
-seems to be is a good starting point for explaining Bitcoin.
+We can **analyze the network graph for cliques**. This is interesting because
+it shows how some concepts are more tightly related.  This seems to be is a promising starting point for segmenting the subject matter.
 
 ![Cliques in the network graph](assets/base-concepts-cliques.png)
 
-What if we score subjects for their complexity, their prerequisite value, and subtract prerequisite value from complexity score? This gives us a pretty nice roadmap.
+What if we score subjects for their prerequisite value, their complexity (the number of its prerequisites), and subtract prerequisite value from complexity score? 
+This gives us a pretty nice roadmap! Let's cover the subjects thet unlock the most other subjects, and are least complex to begin with.
 
 |   prerequisite (P)  | complexity (C)  | P - C  |
 | ---- | ---- | ---- |
