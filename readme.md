@@ -15,6 +15,8 @@ These are the notes for my [Hackfest 2023](https://hackfest.ca/) presentation.
 
 ### Introduction
 
+todo.
+
 ### Epistemology of Bitcoin (some high level conclusions)
 
 Why does it feel like explaining Bitcoin is so hard? It feels like
@@ -32,7 +34,7 @@ to explain Bitcoin in a coherent way?
 
 ![Base concepts and their prereqisite relationships](assets/base-concepts-graph-1.png)
 
-Here's another way to visualize the same graph network. This time, let's use a **layered graph layout**. This is a little better, but still a mess.
+Let's use a **layered graph layout** to visualize the subject prerequisite relationships. This is a little better, but it's still a mess.
 
 ![Layered format for the network graph](assets/base-concepts-layered.png)
 
@@ -44,14 +46,9 @@ seems to be is a good starting point for explaining Bitcoin.
 
 What if we score subjects for their complexity, their prerequisite value, and subtract prerequisite value from complexity score? This gives us a pretty nice roadmap.
 
-|   complexity   |  prerequisite    | C - P  |
+|   complexity (C)  |  prerequisite (P)   | C - P  |
 | ---- | ---- | ---- |
-| ![](assets/scores-complexities.png) | ![](assets/scores-prerequisites.png) | scores-prerequisites-complexities.png     |
-
-
-![](assets/scores-prerequisites.png)
-
-
+| ![](assets/scores-complexities.png) | ![](assets/scores-prerequisites.png) | ![](assets/scores-prerequisites-complexities.png) |
 
 ### BTC, satoshis, and unit bias
 
