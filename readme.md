@@ -101,8 +101,22 @@ all about hashing and digital signatures, which widely accessible subjects, and 
 
 We esplain the following concepts using [Anders Brownworth's blockchain demo](https://github.com/anders94/blockchain-demo) running locally.
 
+* hashing 
+* blocks and blockchains
+* proof of work 
+* mining
+
 ![Anders Brownworth's blockchain demo](assets/Anders-Brownworth-blockchain-demo.png)
 
+### How much mining is going on presently?
+
+According to [Clark Moody's Bitcoin Dashboard](https://bitcoin.clarkmoody.com/dashboard/), on October 8, 2023, there is 422 exahashes per second (EH/s) of 
+mining activity on the Bitcoin network. 
+
+Which means, miners are presently 422 * 10^18 hashes per second.  
+
+![](assets/mining-intensity.png)
+![](assets/si-prefixes.png)
 ### Bitcoin's heartbeat: Block time, mining difficulty, and mining difficulty adjustments
 
 ### Halving and issuance
@@ -115,5 +129,5 @@ These are links to things I referenced during the presentation.
 
 - [Anders Brownworth's blockchain demo](https://github.com/anders94/blockchain-demo)
 
-- [Clark Moody Bitcoin Dashboard](https://bitcoin.clarkmoody.com/)
+- [Clark Moody Bitcoin Dashboard](https://bitcoin.clarkmoody.com/dashboard/)
 
