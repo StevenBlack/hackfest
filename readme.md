@@ -77,8 +77,8 @@ For example, here are some math symbols you won't see in Bitcoin world:
 ≈   𝝅   ℯ   i   √   ∂x/∂t   ∫   Σ   ∏   μ   σ   n!   ε   ∞   ÷
 ```
 In fact, you won't see any vectors or matrices either. There are no angles, there is no trig. There are no imaginary numbers.  There are no negative numbers 
-either. There are no fractions.  There are no decimals and no irrational numbers.  Bitcoin maath is actually accessible to anyone who has completed 
-grade 8 math.
+either. There are no fractions.  There are no decimals and no irrational numbers.  Bitcoin's math is actually accessible to anyone who has completed 
+grade 8 mathematics.
 
 As for cryptography, there is nothing encrypled in Bitcoin, so there's nothing to decrypt either. The cryptography primitives used by the Bitcoin network is 
 all about hashing and digital signatures, which widely accessible subjects, and certainly not at all "at the leading edge of cryptography."
