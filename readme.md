@@ -26,7 +26,20 @@ Here I extemporaneously explain who I am, why I'm here, and what I'm going to ta
 Why does it feel like explaining Bitcoin is so hard? It feels like
 understanding Bitcoin has a high activation energy, with an elevated  "hump" that dissuades many people from understanding it.
 
+Sorta like an endothermic reaction in chemistry, where there's typically an energy hump that needs to be overcome before the reaction can proceed.
+
 ![Activation energy](assets/endothermic-reaction.png)
+
+The other thing about explaining Bitcoin is that it's a broad subject with orthogonal facets.  Explaining Bitcoin involves explaining things
+that are ***related***, but ***not correlated or interdependant***.  This makes it hard to know where to start.  One finds oneself having to go back
+to the beginning to introduce a new primitive concept, then moving forward with the combined abstractions, again and again.
+
+It sometimes feels like a Tarantino movie, where the story is told in a non-linear fashion, and you have to go back to the beginning to understand.
+
+| ![](assets/pulp-fiction.jpg) |  ![](assets/kill-bill.jpg)    |
+| ---- | ---- |
+
+
 
 If we list Bitcoin's salient subjects, and cross-reference among them for
 prerequisite relationships, we get a table that looks like this.
