@@ -69,7 +69,7 @@ In other words, the strategy is to start with the subjects that have the highest
 
 This gives us a pretty nice roadmap! 
 
-|   prerequisite (P)  | complexity (C)  | P - C  |
+|   prerequisite value (P)  | complexity (C)  | P - C  |
 | ---- | ---- | ---- |
 | ![](assets/scores-prerequisites.png) | ![](assets/scores-complexities.png) | ![](assets/scores-prerequisites-complexities.png) |
 
