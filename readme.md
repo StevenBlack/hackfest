@@ -2,6 +2,10 @@
 
 These are the notes for my [Hackfest 2023](https://hackfest.ca/) presentation.
 
+The topic is presented in French. The title of the presentaton is "***Bitcoin: Cool et pas à peu près***" which is colloquial 
+French for "***Bitcoin: Cool and not nearly***".  Which means, in essence, *Bitcoin is pretty cool*. The aim of the session 
+is to explain Bitcoin while highlighting its cooler technical facets.
+
 ## Session outline
 
 1. [Introduction](#Introduction)
@@ -15,7 +19,7 @@ These are the notes for my [Hackfest 2023](https://hackfest.ca/) presentation.
 
 ### Introduction
 
-todo.
+Here I extemporaneously explain who I am, and why I'm here, and what I'm going to talk about. You had to be there.
 
 ### Epistemology of Bitcoin (some high level conclusions)
 
