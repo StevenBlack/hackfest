@@ -46,9 +46,9 @@ seems to be is a good starting point for explaining Bitcoin.
 
 What if we score subjects for their complexity, their prerequisite value, and subtract prerequisite value from complexity score? This gives us a pretty nice roadmap.
 
-|   complexity (C)  |  prerequisite (P)   | C - P  |
+|   prerequisite (P)  | complexity (C)  | P - C  |
 | ---- | ---- | ---- |
-| ![](assets/scores-complexities.png) | ![](assets/scores-prerequisites.png) | ![](assets/scores-prerequisites-complexities.png) |
+| ![](assets/scores-prerequisites.png) | ![](assets/scores-complexities.png) | ![](assets/scores-prerequisites-complexities.png) |
 
 ### BTC, satoshis, and unit bias
 
