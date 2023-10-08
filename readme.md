@@ -108,15 +108,35 @@ We esplain the following concepts using [Anders Brownworth's blockchain demo](ht
 
 ![Anders Brownworth's blockchain demo](assets/Anders-Brownworth-blockchain-demo.png)
 
-### How much mining is going on presently?
+### How much mining is presently going on?
 
 According to [Clark Moody's Bitcoin Dashboard](https://bitcoin.clarkmoody.com/dashboard/), on October 8, 2023, there is 422 exahashes per second (EH/s) of 
 mining activity on the Bitcoin network. 
 
-Which means, miners are presently 422 * 10^18 hashes per second.  
+Which means, miners are presently executing 422 * 10^18 hashes per second.  
 
 ![](assets/mining-intensity.png)
 ![](assets/si-prefixes.png)
+
+#### Calculating the electrical power consumption of the Bitcoin network (from mining rig specs)
+
+A [Bitmain Antminer S19 Pro (110 TH)](https://www.asicminervalue.com/miners/bitmain/antminer-s19-pro-110th) mining rig is capable of 110 TH/s while consuming
+3250 Watts of electrical power.  Which means, presuming this rig is typical (it's close), there would be 3,800,000 of these rigs mining Bitcoin presently, 
+consiming 12,350,000 Watts (12.4 GW) of electrical power.
+
+In comparison, the LG-2 power generating station in Baie James is capable of generating 5,616 MW (5.6 GW) of electrical power.  Which means, the Bitcoin network 
+is presently consuming the equivalent of about 2.2 LG-2 power generating stations.
+
+#### Calculating the electrical power consumption of the Bitcoin network (from financial constraints)
+
+The Bitcoin network presently generates 144 blocks per day, and each block is worth 6.25 BTC plus about 4% in fees.  So the daily reward is about 936 BTC per day.
+
+At a price of $38,500 CAD per BTC, the daily mining reward is worth CAD $36,000,00 per day, or CAD $1.5 million per hour.
+
+At a price of 7.8¢/kWh (in Québec), the Bitcoin network would be presently consuming 19.2 GW of electrical power at breakeven.  Which is about 3.5 LG-2 power generating stations.
+
+
+
 ### Bitcoin's heartbeat: Block time, mining difficulty, and mining difficulty adjustments
 
 ### Halving and issuance
