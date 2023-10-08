@@ -47,8 +47,12 @@ it shows how some concepts are more tightly related.  This seems to be is a prom
 
 ![Cliques in the network graph](assets/base-concepts-cliques.png)
 
-What if we score subjects for their prerequisite value, their complexity (the number of its prerequisites), and subtract prerequisite value from complexity score? 
-This gives us a pretty nice roadmap! Let's cover the subjects thet unlock the most other subjects, and are least complex to begin with.
+What if we score subjects for their prerequisite value, their complexity (the number of prerequisites), and subtract the complexity score 
+from the prerequisite value?  
+
+In other words, the strategy is to start with the subjects that have the highest prerequisite value, and the lowest complexity.
+
+This gives us a pretty nice roadmap! 
 
 |   prerequisite (P)  | complexity (C)  | P - C  |
 | ---- | ---- | ---- |
