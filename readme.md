@@ -60,7 +60,7 @@ This gives us a pretty nice roadmap!
 
 ### BTC, satoshis, and unit bias
 
-![8 decimals](assets/eight-decimals.png)
+![8 decimals](assets/eight-decimals-fr.png)
 
 ### Hashing, blocks, proof of work
 
