@@ -3,18 +3,18 @@
 These are the notes for my [Hackfest 2023](https://hackfest.ca/) presentation.
 
 The topic is presented in French. The title of the presentaton is "***Bitcoin: Cool et pas à peu près***" which is colloquial 
-French for "***Bitcoin: Cool and not nearly***".  Which means, in essence, *Bitcoin is pretty cool*. The aim of the session 
-is to explain Bitcoin while highlighting its cooler technical facets.
+French for "***Bitcoin: Cool and not nearly***".  Which means, in essence, *Bitcoin is pretty cool*. 
+
+The aim of the session is to explain Bitcoin while highlighting its cooler technical facets. In 45 minutes.
 
 ## Session outline
 
 1. [Introduction](#Introduction)
-1. [Epistemology of Bitcoin (some high level conclusions)](#Epistemology-of-Bitcoin-(some-high-level-conclusions))
-1. [BTC, satoshis, and unit bias](#BTC,-satoshis,-and-unit-bias)
-1. [Hashing, blocks, proof of work](#Hashing,-blocks,-proof-of-work)
-1. [Block time, mining difficulty, and mining difficulty adjustments](#Block-time,-mining-difficulty,-and-mining-difficulty-adjustments)
-1. [Bitcoin's heartbeat, and mining difficulty adjustments](#Bitcoin's-heartbeat,-and-mining-difficulty-adjustments)
-1. [Halving and issuance](#Halving-and-issuance)
+1. [Epistemology of Bitcoin (some high level conclusions)](#link-to-come)
+1. [BTC, satoshis, and unit bias](#link-to-come)
+1. [Hashing, blocks, proof of work, and mining](#link-to-come)
+1. [Bitcoin's heartbeat: Block time, mining difficulty, and mining difficulty adjustments](#link-to-come)
+1. [Halving and issuance](#link-to-come)
 
 
 ### Introduction
@@ -60,13 +60,31 @@ This gives us a pretty nice roadmap!
 
 ### BTC, satoshis, and unit bias
 
-![8 decimals](assets/eight-decimals-fr.png)
+Bitcoin values are expressed in satoshis. 1 BTC is 100,000,000 satoshis. This is why we see at most 8 decimals in Bitcoin values.
 
-### Hashing, blocks, proof of work
+![8 decimals](assets/eight-decimals.png)
 
-### Block time, mining difficulty, and mining difficulty adjustments
+Note that, when we express a value denominated in BTC, we typically get a decimal value. Fun fact: this is the ONLY place in the Bitcoin universe 
+where we see a real number, or a decimal of any sort. Bitcoin world is all about integer values only.
 
-### Bitcoin's heartbeat, and mining difficulty adjustments
+![8 decimals](assets/real-number.png)
+
+You may have heard something to the effect that ***"Bitcoin is at the leading edge of mathematics, cryptography, and computer science"***.  This is a little bit of an overstatement.  
+
+For example, here are some math symbols you won't see in Bitcoin world:
+
+```
+≈   𝝅   ℯ   i   √   ∂x/∂t   ∫   Σ   ∏   μ   σ   n!   ε   ∞   ÷
+```
+In fact, you won't see any vectors or matrices either. There are no angles, there is no trig. There are no imaginary numbers.  There are no negative numbers 
+either. There are no fractions.  There are no decimals and no irrational numbers.  Bitcoin maath is actually accessible to anyone who has completed 
+grade 8 math.
+
+As for cryptography, there is nothing encrypled in Bitcoin, so there's nothing to decrypt either. The cryptography primitives used by the Bitcoin network is 
+all about hashing and digital signatures, which widely accessible subjects, and certainly not at all "at the leading edge of cryptography."
+### Hashing, blocks, proof of work, and mining
+
+### Bitcoin's heartbeat: Block time, mining difficulty, and mining difficulty adjustments
 
 ### Halving and issuance
 
