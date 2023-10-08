@@ -34,15 +34,17 @@ The other thing about explaining Bitcoin is that it's a broad subject with ortho
 that are ***related***, but ***not correlated or interdependant***.  This makes it hard to know where to start.  One finds oneself having to go back
 to the beginning to introduce a new primitive concept, then moving forward with the combined abstractions, again and again.
 
-It sometimes feels like a Tarantino movie, where the story is told in a non-linear fashion, and you have to go back to the beginning to understand.
+**Explaining Bitcoin sometimes feels like a Tarantino movie**, where the story is told in a non-linear fashion, and you have to go back to the beginning to understand.
 
 | ![](assets/pulp-fiction.jpg) |  ![](assets/kill-bill.jpg)    |
 | ---- | ---- |
 
+#### Analyzing Bitcoin subject matter
 
+Here we try to picture and resolve why Bitcoin is so hard to explain.  We start by picking 21 facets to be explained. We could have picked 40 facets, but 
+21 is ample.
 
-If we list Bitcoin's salient subjects, and cross-reference among them for
-prerequisite relationships, we get a table that looks like this.
+If we list Bitcoin's salient subjects, and cross-reference among them for prerequisite relationships, we get a table that looks like this.
 
 ![Base concepts and their prereqisite relationships](assets/base-concepts-related.png)
 
