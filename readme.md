@@ -140,6 +140,27 @@ In short, global Bitcoin energy use is equivalent to 40-50% of the electrical po
 
 ### Halving and issuance
 
+Bitcoin issuance is controlled and limited by a systematic gradual reduction of the block reward.  This is called the "halving", which occurs every 210,000 blocks.
+
+The first block reward was 50 BTC, which is 5 billion satoshi. In 2016 the block reward was "halved" to 25 BTC, then 12.5 BTC in 2016, and 6.25 BTC in 2020.
+
+How does "halving" ever get to zero? And didn't we say earlier that there are no
+division operations in bitcoin?  The answer is that the block reward is not halved by division, but by bit shifting.  The block reward is an integer value, and removing bits, one by one, is equivalent to dividing by 2 each time.
+
+The value of 5 billion satochi — 50 BTC — is represented in binary as follows:
+
+```
+100101010000001011111001000000000
+```
+
+Every 210,000 blocks, one bit gets dropped from the right side of the binary value.  This is equivalent to dividing by 2. 
+
+Here is a table of the halving epochs, and the block reward in BTC and satoshi.
+
+![](assets/btc-halving-epochs.png)
+
+
+
 ## Resources
 
 These are links to things I referenced during the presentation.
