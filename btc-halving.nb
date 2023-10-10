@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       161,          7]
-NotebookDataLength[     36073,       1160]
-NotebookOptionsPosition[     34263,       1120]
-NotebookOutlinePosition[     34691,       1137]
-CellTagsIndexPosition[     34648,       1134]
+NotebookDataLength[     36145,       1147]
+NotebookOptionsPosition[     34281,       1105]
+NotebookOutlinePosition[     34763,       1124]
+CellTagsIndexPosition[     34720,       1121]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -154,7 +154,7 @@ Cell[BoxData[
            "N"}]}], "\[IndentingNewLine]", "}"}]}], ",", 
        "\[IndentingNewLine]", 
        RowBox[{"{", 
-        RowBox[{"x", ",", "0", ",", "33"}], "}"}]}], "]"}], ",", 
+        RowBox[{"x", ",", "0", ",", "32"}], "}"}]}], "]"}], ",", 
      RowBox[{"{", "\[IndentingNewLine]", 
       RowBox[{
       "\"\<Year\>\"", "\[IndentingNewLine]", ",", "\"\<Epoch\>\"", 
@@ -169,15 +169,14 @@ Cell[BoxData[
        RowBox[{"Column", "[", 
         RowBox[{
          RowBox[{"{", 
-          RowBox[{"\"\<Block Reward\>\"", ",", " ", "\"\<(sats)\>\""}], "}"}],
-          ",", " ", 
+          RowBox[{"\"\<Block Reward\>\"", ",", " ", "\"\<(satoshi)\>\""}], 
+          "}"}], ",", " ", 
          RowBox[{"Alignment", "->", "Right"}]}], "]"}], "\[IndentingNewLine]",
         ",", "\"\<Satoshi (in binary)\>\"", "\[IndentingNewLine]", ",", 
        RowBox[{"Column", "[", 
         RowBox[{
          RowBox[{"{", 
-          RowBox[{
-          "\"\<210,000 blocks\>\"", ",", " ", "\"\<total reward (BTC)\>\""}], 
+          RowBox[{"\"\<210k blocks\>\"", ",", " ", "\"\<total (BTC)\>\""}], 
           "}"}], ",", " ", 
          RowBox[{"Alignment", "->", "Right"}]}], "]"}]}], 
       "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", "]"}], 
@@ -211,9 +210,13 @@ Cell[BoxData[
    3.8585157456928997`*^9}, {3.9058766661793537`*^9, 3.90587666633958*^9}, {
    3.905876924386516*^9, 3.9058769465845222`*^9}, {3.9058770038737392`*^9, 
    3.9058770071429377`*^9}, {3.90587727423069*^9, 3.905877291111185*^9}, {
-   3.905877335451563*^9, 3.905877633345092*^9}},
+   3.905877335451563*^9, 3.905877633345092*^9}, {3.905888052721863*^9, 
+   3.905888067554196*^9}, {3.9058881041290073`*^9, 3.905888113119213*^9}, {
+   3.905888623400197*^9, 3.905888653254809*^9}, {3.905888701219623*^9, 
+   3.905888701526451*^9}, {3.905888737402516*^9, 3.905888737567254*^9}, {
+   3.9058887772803288`*^9, 3.905888790414794*^9}},
  CellLabel->
-  "In[695]:=",ExpressionUUID->"5ce24af2-bc30-42ff-b699-62b246091783"],
+  "In[791]:=",ExpressionUUID->"5ce24af2-bc30-42ff-b699-62b246091783"],
 
 Cell[BoxData[
  TagBox[GridBox[{
@@ -228,15 +231,15 @@ Cell[BoxData[
       "Column"], 
      TagBox[GridBox[{
         {"\<\"Block Reward\"\>"},
-        {"\<\"(sats)\"\>"}
+        {"\<\"(satoshi)\"\>"}
        },
        DefaultBaseStyle->"Column",
        GridBoxAlignment->{"Columns" -> {{Right}}},
        GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
       "Column"], "\<\"Satoshi (in binary)\"\>", 
      TagBox[GridBox[{
-        {"\<\"210,000 blocks\"\>"},
-        {"\<\"total reward (BTC)\"\>"}
+        {"\<\"210k blocks\"\>"},
+        {"\<\"total (BTC)\"\>"}
        },
        DefaultBaseStyle->"Column",
        GridBoxAlignment->{"Columns" -> {{Right}}},
@@ -1009,29 +1012,6 @@ Cell[BoxData[
         ShowStringCharacters->False],
        0.0021,
        AutoDelete->True],
-      NumberForm[#, 5]& ]},
-    {"2140", "34", 
-     TagBox[
-      InterpretationBox[
-       StyleBox["\<\"0.\"\>",
-        ShowStringCharacters->False],
-       0.,
-       AutoDelete->True],
-      AccountingForm[#, 8]& ], "0", 
-     TagBox[
-      InterpretationBox[
-       StyleBox[
-        SubscriptBox["\<\"0\"\>", "\<\"2\"\>"],
-        ShowStringCharacters->False],
-       0,
-       Editable->False],
-      BaseForm[#, 2]& ], 
-     TagBox[
-      InterpretationBox[
-       StyleBox["\<\"0.\"\>",
-        ShowStringCharacters->False],
-       0.,
-       AutoDelete->True],
       NumberForm[#, 5]& ]}
    },
    AutoDelete->False,
@@ -1043,9 +1023,11 @@ Cell[BoxData[
   "Grid"]], "Output",
  CellChangeTimes->{
   3.905877440523149*^9, 3.9058775403795137`*^9, {3.905877588167997*^9, 
-   3.9058776355585938`*^9}},
+   3.9058776355585938`*^9}, {3.9058880943570623`*^9, 
+   3.9058881141219873`*^9}, {3.905888625893467*^9, 3.905888653815098*^9}, 
+   3.905888702885364*^9, 3.9058887381913357`*^9, 3.9058887917353687`*^9},
  CellLabel->
-  "Out[695]=",ExpressionUUID->"da9ac8a5-5e8d-4926-a159-f1e554c7b77d"]
+  "Out[791]=",ExpressionUUID->"95fe2937-107e-4224-9bae-2036f5cd579b"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1059,24 +1041,26 @@ Cell[BoxData[
       RowBox[{"BitShiftRight", "[", 
        RowBox[{"coinbase", ",", "x"}], "]"}]}], "\[IndentingNewLine]", ",", 
      RowBox[{"{", 
-      RowBox[{"x", ",", "0", ",", "34"}], "}"}]}], "\[IndentingNewLine]", 
+      RowBox[{"x", ",", "0", ",", "32"}], "}"}]}], "\[IndentingNewLine]", 
     "]"}], "\[IndentingNewLine]", "]"}]}]], "Input",
  CellChangeTimes->{{3.819828582188751*^9, 3.8198285842666483`*^9}, {
   3.8483607099834843`*^9, 3.8483607571534777`*^9}, {3.8483614360336637`*^9, 
   3.848361498955453*^9}, {3.8483615417787323`*^9, 3.8483616251733503`*^9}, {
   3.848361658948526*^9, 3.848361716632012*^9}, {3.848361802036928*^9, 
-  3.848361803995583*^9}, {3.905876533904805*^9, 3.905876559166667*^9}},
+  3.848361803995583*^9}, {3.905876533904805*^9, 3.905876559166667*^9}, {
+  3.905888552012053*^9, 3.905888576899231*^9}},
  CellLabel->
-  "In[682]:=",ExpressionUUID->"876bf94b-7ae8-4719-b8df-ae9cd6411e2f"],
+  "In[792]:=",ExpressionUUID->"876bf94b-7ae8-4719-b8df-ae9cd6411e2f"],
 
 Cell[BoxData["2099999997690000"], "Output",
  CellChangeTimes->{
   3.905876030035228*^9, 3.90587618786156*^9, {3.90587656033022*^9, 
    3.905876571107689*^9}, 3.905876730549468*^9, 3.905876787727037*^9, {
    3.9058768207514553`*^9, 3.9058768658982687`*^9}, {3.905876939892178*^9, 
-   3.905876949910082*^9}, 3.9058770117335587`*^9},
+   3.905876949910082*^9}, 3.9058770117335587`*^9, {3.905888554967255*^9, 
+   3.90588857754593*^9}, 3.905888995504078*^9},
  CellLabel->
-  "Out[682]=",ExpressionUUID->"fc83038e-612e-46a3-8b2e-22be2f8b6c51"]
+  "Out[792]=",ExpressionUUID->"b8356f4c-2e4f-4202-8eb3-64b4840e3ff2"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1095,7 +1079,7 @@ Cell[BoxData[
    3.905876372161438*^9}, {3.905876411612712*^9, 3.905876484900317*^9}, 
    3.90587709866297*^9},
  CellLabel->
-  "In[696]:=",ExpressionUUID->"b1b917ff-cbb6-4382-9733-4c1f89588c59"],
+  "In[793]:=",ExpressionUUID->"b1b917ff-cbb6-4382-9733-4c1f89588c59"],
 
 Cell[BoxData[
  TagBox[
@@ -1110,16 +1094,19 @@ Cell[BoxData[
    3.90587641783136*^9, 3.905876485332995*^9}, {3.9058765648467293`*^9, 
    3.905876571112938*^9}, 3.905876730558564*^9, 3.905876787756393*^9, {
    3.9058768207870827`*^9, 3.905876865907878*^9}, {3.90587693990172*^9, 
-   3.905876949919827*^9}, 3.9058770117545357`*^9, 3.9058777126268787`*^9},
+   3.905876949919827*^9}, 3.9058770117545357`*^9, 3.9058777126268787`*^9, 
+   3.90588899856443*^9},
  CellLabel->
-  "Out[696]//AccountingForm=",ExpressionUUID->"85210719-deed-4c22-b4f7-\
-b17f44d9265a"]
+  "Out[793]//AccountingForm=",ExpressionUUID->"11573d24-f7e2-46ef-ad64-\
+a1b3622c51ca"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{1234, 1257},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
 Magnification:>1.25 Inherited,
 FrontEndVersion->"13.2 for Mac OS X ARM (64-bit) (November 18, 2022)",
 StyleDefinitions->"Default.nb",
@@ -1149,16 +1136,16 @@ Cell[2139, 68, 567, 15, 60, "Output",ExpressionUUID->"85f7b43c-f13e-40a3-b11f-d9
 Cell[2721, 86, 411, 12, 44, "Text",ExpressionUUID->"7eabeaa3-bdc6-4af8-85d4-ddf85f6390fb"],
 Cell[3135, 100, 629, 16, 102, "Text",ExpressionUUID->"011bc30c-62f6-4209-bdbc-1a151afed268"],
 Cell[CellGroupData[{
-Cell[3789, 120, 4855, 95, 688, "Input",ExpressionUUID->"5ce24af2-bc30-42ff-b699-62b246091783"],
-Cell[8647, 217, 22805, 830, 869, "Output",ExpressionUUID->"da9ac8a5-5e8d-4926-a159-f1e554c7b77d"]
+Cell[3789, 120, 5134, 98, 688, "Input",ExpressionUUID->"5ce24af2-bc30-42ff-b699-62b246091783"],
+Cell[8926, 220, 22399, 809, 867, "Output",ExpressionUUID->"95fe2937-107e-4224-9bae-2036f5cd579b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[31489, 1052, 900, 17, 168, "Input",ExpressionUUID->"876bf94b-7ae8-4719-b8df-ae9cd6411e2f"],
-Cell[32392, 1071, 413, 7, 42, "Output",ExpressionUUID->"fc83038e-612e-46a3-8b2e-22be2f8b6c51"]
+Cell[31362, 1034, 949, 18, 168, "Input",ExpressionUUID->"876bf94b-7ae8-4719-b8df-ae9cd6411e2f"],
+Cell[32314, 1054, 484, 8, 42, "Output",ExpressionUUID->"b8356f4c-2e4f-4202-8eb3-64b4840e3ff2"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[32842, 1083, 696, 14, 37, "Input",ExpressionUUID->"b1b917ff-cbb6-4382-9733-4c1f89588c59"],
-Cell[33541, 1099, 682, 16, 80, "Output",ExpressionUUID->"85210719-deed-4c22-b4f7-b17f44d9265a"]
+Cell[32835, 1067, 696, 14, 37, "Input",ExpressionUUID->"b1b917ff-cbb6-4382-9733-4c1f89588c59"],
+Cell[33534, 1083, 707, 17, 60, "Output",ExpressionUUID->"11573d24-f7e2-46ef-ad64-a1b3622c51ca"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

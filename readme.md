@@ -145,7 +145,9 @@ Bitcoin issuance is controlled and limited by a systematic gradual reduction of 
 The first block reward was 50 BTC, which is 5 billion satoshi. In 2016 the block reward was "halved" to 25 BTC, then 12.5 BTC in 2016, and 6.25 BTC in 2020.
 
 How does "halving" ever get to zero? And didn't we say earlier that there are no
-division operations in bitcoin?  The answer is that the block reward is not halved by division, but by bit shifting.  The block reward is an integer value, and removing bits, one by one, is equivalent to dividing by 2 each time.
+division operations in bitcoin?  The answer is that the block reward is not halved 
+by division, but by bit shifting.  The block reward is an integer value, and 
+removing bits, one by one, is equivalent to dividing by 2 each time.
 
 The value of 5 billion satochi — 50 BTC — is represented in binary as follows:
 
@@ -153,13 +155,19 @@ The value of 5 billion satochi — 50 BTC — is represented in binary as follow
 100101010000001011111001000000000
 ```
 
-Every 210,000 blocks, one bit gets dropped from the right side of the binary value.  This is equivalent to dividing by 2. 
+Every 210,000 blocks, one bit gets dropped from the right side of the binary value. 
+This is equivalent to dividing by 2, wrapped in a `floor()` function so it rounds 
+down when the dropped bit is `1`. 
 
 Here is a table of the halving epochs, and the block reward in BTC and satoshi.
 
 ![](assets/btc-halving-epochs.png)
 
 
+It's notable that the sum of all block rewards is just under 21 million BTC, \!\(
+20,999,999.9769 BTC to be precise.
+
+![](assets/btc-21m-bit-less.png)
 
 ## Resources
 
