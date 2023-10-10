@@ -23,18 +23,20 @@ Here I extemporaneously explain who I am, why I'm here, and what I'm going to ta
 
 ### Epistemology of Bitcoin (some high level conclusions)
 
-Why does it feel like explaining Bitcoin is so hard? It feels like
-understanding Bitcoin has a high activation energy, with an elevated  "hump" that dissuades many people from understanding it.
+Why does it feel like properly explaining Bitcoin is so hard? Understanding Bitcoin certainly has a learning curve. 
 
-Sorta like an endothermic reaction in chemistry, where there's typically an energy hump that needs to be overcome before the reaction can proceed.
+It feels like understanding Bitcoin requires a certain *activation energy*, with an elevated  "hump" that dissuades many people from fully understanding it.
+
+It's like an endothermic reaction in chemistry, where there's typically an energy hump that needs to be overcome before the reaction can proceed.
 
 ![Activation energy](assets/endothermic-reaction.png)
 
 The other thing about explaining Bitcoin is that it's a broad subject with orthogonal facets.  Explaining Bitcoin involves explaining things
-that are ***related***, but ***not correlated or interdependant***.  This makes it hard to know where to start.  One finds oneself having to go back
-to the beginning to introduce a new primitive concept, then moving forward with the combined abstractions, again and again.
+that are ***related***, but ***not correlated**.  This makes it hard to know where to start.  A linear logical narrative doesn't appear to exist.
+One finds oneself having to go back to the beginning to introduce a new primitive concept, then moving forward with the combined abstractions, again and again.
 
-**Explaining Bitcoin sometimes feels like a Tarantino movie**, where the story is told in a non-linear fashion, and you have to go back to the beginning to understand.
+**Explaining Bitcoin sometimes feels like a Tarantino movie**, where the story is told in a non-linear fashion, and you have to go back and forth through the 
+narrative to more fully understand.
 
 | ![](assets/pulp-fiction.jpg) |  ![](assets/kill-bill.jpg)    |
 | ---- | ---- |
@@ -165,7 +167,7 @@ Here is a table of the halving epochs, and the block reward in BTC and satoshi.
 
 
 It's notable that the sum of all block rewards is just under 21 million BTC, \!\(
-20,999,999.9769 BTC to be precise.
+20,999,999.9769 BTC to be precise.)
 
 ![](assets/btc-21m-bit-less.png)
 
