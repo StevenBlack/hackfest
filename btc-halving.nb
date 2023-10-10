@@ -1,0 +1,1168 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[     36073,       1160]
+NotebookOptionsPosition[     34263,       1120]
+NotebookOutlinePosition[     34691,       1137]
+CellTagsIndexPosition[     34648,       1134]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Halving", "Title",
+ CellChangeTimes->{{3.819829751311235*^9, 
+  3.819829753494207*^9}},ExpressionUUID->"d3fc32c0-7235-4fef-8d39-\
+35f7fafe3bd1"],
+
+Cell[TextData[{
+ "The original block reward is ",
+ StyleBox["50 BTC",
+  FontWeight->"Bold"],
+ " or ",
+ StyleBox["5 billion Satoshi.",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.819829819993218*^9, 3.819830016452662*^9}, 
+   3.81983004802252*^9, 3.8198305589767847`*^9, {3.823281585005184*^9, 
+   3.823281601992723*^9}, {3.8232818839124203`*^9, 3.8232819060167093`*^9}, {
+   3.9058766419132633`*^9, 
+   3.905876641993309*^9}},ExpressionUUID->"d123944f-1a8f-4483-a35d-\
+fc95f7195058"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"coinbase", " ", "=", " ", 
+   RowBox[{"50", "*", "100000000"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.819830060065701*^9, 3.819830073088365*^9}, {
+  3.819830441271577*^9, 3.819830453124352*^9}, {3.905876750097878*^9, 
+  3.905876771671187*^9}, {3.9058768072944202`*^9, 3.9058768558321877`*^9}},
+ CellLabel->
+  "In[679]:=",ExpressionUUID->"bd6d855f-dc8e-4bc1-ab09-babf0c6724e1"],
+
+Cell[CellGroupData[{
+
+Cell["The 50 BTC coinbase (block reward)  in binary", "Subsubsection",
+ CellChangeTimes->{{3.819830374478663*^9, 
+  3.819830401891467*^9}},ExpressionUUID->"0bd561b9-96a1-4c26-993e-\
+941f96b42bef"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"BaseForm", "[", 
+  RowBox[{"coinbase", ",", "2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.819830446824383*^9, 3.8198304473894157`*^9}},
+ CellLabel->
+  "In[680]:=",ExpressionUUID->"38cf49e8-72aa-4983-be7c-f3d8a25598da"],
+
+Cell[BoxData[
+ TagBox[
+  InterpretationBox[
+   StyleBox[
+    SubscriptBox["\<\"100101010000001011111001000000000\"\>", "\<\"2\"\>"],
+    ShowStringCharacters->False],
+   5000000000,
+   Editable->False],
+  BaseForm[#, 2]& ]], "Output",
+ CellChangeTimes->{
+  3.905876697316724*^9, 3.9058767305209713`*^9, {3.905876777762638*^9, 
+   3.905876787649514*^9}, {3.905876820670199*^9, 3.905876865868658*^9}, {
+   3.9058769398517513`*^9, 3.905876949873859*^9}, 3.90587701170172*^9},
+ CellLabel->
+  "Out[680]//BaseForm=",ExpressionUUID->"85f7b43c-f13e-40a3-b11f-\
+d93c89fb7d8c"]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["Halving",
+  FontWeight->"Bold"],
+ " happens every 4 years,  ",
+ StyleBox["every 210,000 blocks",
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.819829819993218*^9, 3.819830016452662*^9}, 
+   3.81983005677602*^9, {3.819830469657464*^9, 3.819830493669641*^9}, {
+   3.823281967531851*^9, 
+   3.823281996309474*^9}},ExpressionUUID->"7eabeaa3-bdc6-4af8-85d4-\
+ddf85f6390fb"],
+
+Cell[TextData[{
+ StyleBox["So how does the coinbase get to zero if it's cut in half, forever?\
+\n\nAnswer:",
+  FontWeight->"Bold"],
+ "  the coinbase is ",
+ StyleBox["cut in \[OpenCurlyDoubleQuote]half\[CloseCurlyDoubleQuote]",
+  FontWeight->"Bold"],
+ " by ",
+ StyleBox["dropping its last bit",
+  FontWeight->"Bold"],
+ ", until there are no more bits (it's zero)."
+}], "Text",
+ CellChangeTimes->{{3.819829819993218*^9, 3.819830016452662*^9}, 
+   3.81983005677602*^9, {3.8198304977762747`*^9, 3.8198305074062634`*^9}, {
+   3.823281638994439*^9, 
+   3.8232816790238333`*^9}},ExpressionUUID->"011bc30c-62f6-4209-bdbc-\
+1a151afed268"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Grid", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Prepend", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"year", "=", 
+         RowBox[{"2008", "+", 
+          RowBox[{"(", 
+           RowBox[{"4", "*", "x"}], ")"}]}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"halving", "=", 
+         RowBox[{"x", "+", "1"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"sat", "=", 
+         RowBox[{"BitShiftRight", "[", 
+          RowBox[{"coinbase", ",", "x"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"btc", "=", 
+         RowBox[{"sat", "/", "100000000"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"{", "\[IndentingNewLine]", 
+         RowBox[{
+         "year", ",", "\[IndentingNewLine]", "halving", ",", " ", 
+          "\[IndentingNewLine]", 
+          RowBox[{"AccountingForm", "[", 
+           RowBox[{
+            RowBox[{"btc", " ", "//", "N"}], ",", "8"}], "]"}], ",", " ", 
+          "\[IndentingNewLine]", "sat", ",", " ", "\[IndentingNewLine]", 
+          RowBox[{"BaseForm", "[", 
+           RowBox[{"sat", ",", "2"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"NumberForm", "[", 
+            RowBox[{
+             RowBox[{"btc", "*", "210000"}], " ", ",", "5"}], "]"}], "//", 
+           "N"}]}], "\[IndentingNewLine]", "}"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "0", ",", "33"}], "}"}]}], "]"}], ",", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+      "\"\<Year\>\"", "\[IndentingNewLine]", ",", "\"\<Epoch\>\"", 
+       "\[IndentingNewLine]", ",", " ", 
+       RowBox[{"Column", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"\"\<Block Reward\>\"", ",", " ", "\"\<(BTC)\>\""}], "}"}], 
+         ",", " ", 
+         RowBox[{"Alignment", "->", "Right"}]}], "]"}], "\[IndentingNewLine]",
+        ",", " ", 
+       RowBox[{"Column", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"\"\<Block Reward\>\"", ",", " ", "\"\<(sats)\>\""}], "}"}],
+          ",", " ", 
+         RowBox[{"Alignment", "->", "Right"}]}], "]"}], "\[IndentingNewLine]",
+        ",", "\"\<Satoshi (in binary)\>\"", "\[IndentingNewLine]", ",", 
+       RowBox[{"Column", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "\"\<210,000 blocks\>\"", ",", " ", "\"\<total reward (BTC)\>\""}], 
+          "}"}], ",", " ", 
+         RowBox[{"Alignment", "->", "Right"}]}], "]"}]}], 
+      "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", "]"}], 
+   "\[IndentingNewLine]", ",", 
+   RowBox[{"Frame", "\[Rule]", "All"}], ",", " ", 
+   RowBox[{"Alignment", "\[Rule]", " ", "CenterDot"}], ",", " ", 
+   RowBox[{"Background", "\[Rule]", "LightYellow"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.819828473477495*^9, 3.8198287361374083`*^9}, {
+   3.8198287777062273`*^9, 3.819828791543293*^9}, {3.819828907565586*^9, 
+   3.819828940551894*^9}, {3.819829062367836*^9, 3.819829251971373*^9}, {
+   3.819829335986364*^9, 3.8198293444683313`*^9}, {3.819829520631784*^9, 
+   3.819829589660593*^9}, {3.819829630858953*^9, 3.819829671819268*^9}, {
+   3.819830147574088*^9, 3.819830175781158*^9}, {3.819830232894712*^9, 
+   3.81983024664221*^9}, {3.81983032576784*^9, 3.819830329768259*^9}, 
+   3.81983060538937*^9, {3.8198352062356443`*^9, 3.819835216853962*^9}, {
+   3.8198352874367847`*^9, 3.819835294489702*^9}, {3.8248608991183777`*^9, 
+   3.824860943050765*^9}, {3.824860992483644*^9, 3.824861007927343*^9}, {
+   3.824861123072945*^9, 3.824861236562207*^9}, {3.824861289092062*^9, 
+   3.8248613192062607`*^9}, {3.824861571713469*^9, 3.824861614597344*^9}, {
+   3.824861725894812*^9, 3.824861736536273*^9}, {3.824861918777061*^9, 
+   3.8248619271680927`*^9}, {3.824861960165494*^9, 3.824861983667335*^9}, {
+   3.824862029372593*^9, 3.8248621376236486`*^9}, {3.8248622703667793`*^9, 
+   3.8248623219017153`*^9}, {3.8248624748839207`*^9, 3.824862540841886*^9}, {
+   3.824862675492118*^9, 3.82486271929772*^9}, {3.824862790434259*^9, 
+   3.824862798860297*^9}, {3.824862887320653*^9, 3.824862888004423*^9}, {
+   3.824863204097941*^9, 3.824863234234071*^9}, {3.847313331580328*^9, 
+   3.847313331844816*^9}, {3.848360419940475*^9, 3.8483604342156076`*^9}, 
+   3.848362992092094*^9, {3.858444949201228*^9, 3.85844494968117*^9}, {
+   3.858445051058275*^9, 3.8584450540153437`*^9}, {3.8585157452145147`*^9, 
+   3.8585157456928997`*^9}, {3.9058766661793537`*^9, 3.90587666633958*^9}, {
+   3.905876924386516*^9, 3.9058769465845222`*^9}, {3.9058770038737392`*^9, 
+   3.9058770071429377`*^9}, {3.90587727423069*^9, 3.905877291111185*^9}, {
+   3.905877335451563*^9, 3.905877633345092*^9}},
+ CellLabel->
+  "In[695]:=",ExpressionUUID->"5ce24af2-bc30-42ff-b699-62b246091783"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"Year\"\>", "\<\"Epoch\"\>", 
+     TagBox[GridBox[{
+        {"\<\"Block Reward\"\>"},
+        {"\<\"(BTC)\"\>"}
+       },
+       DefaultBaseStyle->"Column",
+       GridBoxAlignment->{"Columns" -> {{Right}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Column"], 
+     TagBox[GridBox[{
+        {"\<\"Block Reward\"\>"},
+        {"\<\"(sats)\"\>"}
+       },
+       DefaultBaseStyle->"Column",
+       GridBoxAlignment->{"Columns" -> {{Right}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Column"], "\<\"Satoshi (in binary)\"\>", 
+     TagBox[GridBox[{
+        {"\<\"210,000 blocks\"\>"},
+        {"\<\"total reward (BTC)\"\>"}
+       },
+       DefaultBaseStyle->"Column",
+       GridBoxAlignment->{"Columns" -> {{Right}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Column"]},
+    {"2008", "1", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"50.\"\>",
+        ShowStringCharacters->False],
+       50.,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "5000000000", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"100101010000001011111001000000000\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       5000000000,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        RowBox[{"\<\"1.05\"\>", "\[Times]", 
+         SuperscriptBox["10", "\<\"7\"\>"]}],
+        ShowStringCharacters->False],
+       1.05*^7,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2012", "2", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"25.\"\>",
+        ShowStringCharacters->False],
+       25.,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "2500000000", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"10010101000000101111100100000000\"\>", "\<\"2\"\>"],
+        
+        ShowStringCharacters->False],
+       2500000000,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        RowBox[{"\<\"5.25\"\>", "\[Times]", 
+         SuperscriptBox["10", "\<\"6\"\>"]}],
+        ShowStringCharacters->False],
+       5.25*^6,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2016", "3", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"12.5\"\>",
+        ShowStringCharacters->False],
+       12.5,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "1250000000", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"1001010100000010111110010000000\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       1250000000,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        RowBox[{"\<\"2.625\"\>", "\[Times]", 
+         SuperscriptBox["10", "\<\"6\"\>"]}],
+        ShowStringCharacters->False],
+       2.625*^6,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2020", "4", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"6.25\"\>",
+        ShowStringCharacters->False],
+       6.25,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "625000000", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"100101010000001011111001000000\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       625000000,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        RowBox[{"\<\"1.3125\"\>", "\[Times]", 
+         SuperscriptBox["10", "\<\"6\"\>"]}],
+        ShowStringCharacters->False],
+       1.3125*^6,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2024", "5", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"3.125\"\>",
+        ShowStringCharacters->False],
+       3.125,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "312500000", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"10010101000000101111100100000\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       312500000,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"656250.\"\>",
+        ShowStringCharacters->False],
+       656250.,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2028", "6", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"1.5625\"\>",
+        ShowStringCharacters->False],
+       1.5625,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "156250000", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"1001010100000010111110010000\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       156250000,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"328130.\"\>",
+        ShowStringCharacters->False],
+       328125.,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2032", "7", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.78125\"\>",
+        ShowStringCharacters->False],
+       0.78125,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "78125000", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"100101010000001011111001000\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       78125000,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"164060.\"\>",
+        ShowStringCharacters->False],
+       164062.5,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2036", "8", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.390625\"\>",
+        ShowStringCharacters->False],
+       0.390625,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "39062500", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"10010101000000101111100100\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       39062500,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"82031.\"\>",
+        ShowStringCharacters->False],
+       82031.25,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2040", "9", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.1953125\"\>",
+        ShowStringCharacters->False],
+       0.1953125,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "19531250", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"1001010100000010111110010\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       19531250,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"41016.\"\>",
+        ShowStringCharacters->False],
+       41015.625,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2044", "10", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.09765625\"\>",
+        ShowStringCharacters->False],
+       0.09765625,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "9765625", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"100101010000001011111001\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       9765625,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"20508.\"\>",
+        ShowStringCharacters->False],
+       20507.8125,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2048", "11", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.04882812\"\>",
+        ShowStringCharacters->False],
+       0.04882812,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "4882812", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"10010101000000101111100\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       4882812,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"10254.\"\>",
+        ShowStringCharacters->False],
+       10253.9052,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2052", "12", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.02441406\"\>",
+        ShowStringCharacters->False],
+       0.02441406,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "2441406", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"1001010100000010111110\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       2441406,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"5127.\"\>",
+        ShowStringCharacters->False],
+       5126.9526,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2056", "13", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.01220703\"\>",
+        ShowStringCharacters->False],
+       0.01220703,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "1220703", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"100101010000001011111\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       1220703,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"2563.5\"\>",
+        ShowStringCharacters->False],
+       2563.4763,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2060", "14", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00610351\"\>",
+        ShowStringCharacters->False],
+       0.00610351,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "610351", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"10010101000000101111\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       610351,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"1281.7\"\>",
+        ShowStringCharacters->False],
+       1281.7371,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2064", "15", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00305175\"\>",
+        ShowStringCharacters->False],
+       0.00305175,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "305175", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"1001010100000010111\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       305175,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"640.87\"\>",
+        ShowStringCharacters->False],
+       640.8675,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2068", "16", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00152587\"\>",
+        ShowStringCharacters->False],
+       0.00152587,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "152587", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"100101010000001011\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       152587,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"320.43\"\>",
+        ShowStringCharacters->False],
+       320.4327,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2072", "17", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00076293\"\>",
+        ShowStringCharacters->False],
+       0.00076293,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "76293", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"10010101000000101\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       76293,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"160.22\"\>",
+        ShowStringCharacters->False],
+       160.2153,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2076", "18", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00038146\"\>",
+        ShowStringCharacters->False],
+       0.00038146,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "38146", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"1001010100000010\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       38146,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"80.107\"\>",
+        ShowStringCharacters->False],
+       80.1066,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2080", "19", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00019073\"\>",
+        ShowStringCharacters->False],
+       0.00019073,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "19073", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"100101010000001\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       19073,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"40.053\"\>",
+        ShowStringCharacters->False],
+       40.0533,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2084", "20", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00009536\"\>",
+        ShowStringCharacters->False],
+       0.00009536,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "9536", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"10010101000000\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       9536,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"20.026\"\>",
+        ShowStringCharacters->False],
+       20.0256,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2088", "21", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00004768\"\>",
+        ShowStringCharacters->False],
+       0.00004768,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "4768", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"1001010100000\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       4768,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"10.013\"\>",
+        ShowStringCharacters->False],
+       10.0128,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2092", "22", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00002384\"\>",
+        ShowStringCharacters->False],
+       0.00002384,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "2384", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"100101010000\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       2384,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"5.0064\"\>",
+        ShowStringCharacters->False],
+       5.0064,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2096", "23", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00001192\"\>",
+        ShowStringCharacters->False],
+       0.00001192,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "1192", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"10010101000\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       1192,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"2.5032\"\>",
+        ShowStringCharacters->False],
+       2.5032,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2100", "24", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00000596\"\>",
+        ShowStringCharacters->False],
+       5.96*^-6,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "596", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"1001010100\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       596,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"1.2516\"\>",
+        ShowStringCharacters->False],
+       1.2516,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2104", "25", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00000298\"\>",
+        ShowStringCharacters->False],
+       2.98*^-6,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "298", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"100101010\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       298,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.6258\"\>",
+        ShowStringCharacters->False],
+       0.6258,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2108", "26", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00000149\"\>",
+        ShowStringCharacters->False],
+       1.49*^-6,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "149", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"10010101\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       149,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.3129\"\>",
+        ShowStringCharacters->False],
+       0.3129,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2112", "27", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00000074\"\>",
+        ShowStringCharacters->False],
+       7.4*^-7,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "74", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"1001010\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       74,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.1554\"\>",
+        ShowStringCharacters->False],
+       0.1554,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2116", "28", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00000037\"\>",
+        ShowStringCharacters->False],
+       3.7*^-7,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "37", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"100101\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       37,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.0777\"\>",
+        ShowStringCharacters->False],
+       0.0777,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2120", "29", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00000018\"\>",
+        ShowStringCharacters->False],
+       1.8*^-7,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "18", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"10010\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       18,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.0378\"\>",
+        ShowStringCharacters->False],
+       0.0378,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2124", "30", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00000009\"\>",
+        ShowStringCharacters->False],
+       9.*^-8,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "9", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"1001\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       9,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.0189\"\>",
+        ShowStringCharacters->False],
+       0.0189,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2128", "31", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00000004\"\>",
+        ShowStringCharacters->False],
+       4.*^-8,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "4", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"100\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       4,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.0084\"\>",
+        ShowStringCharacters->False],
+       0.0084,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2132", "32", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00000002\"\>",
+        ShowStringCharacters->False],
+       2.*^-8,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "2", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"10\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       2,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.0042\"\>",
+        ShowStringCharacters->False],
+       0.0042,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2136", "33", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00000001\"\>",
+        ShowStringCharacters->False],
+       1.*^-8,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "1", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"1\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       1,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.0021\"\>",
+        ShowStringCharacters->False],
+       0.0021,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2140", "34", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.\"\>",
+        ShowStringCharacters->False],
+       0.,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "0", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"0\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       0,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.\"\>",
+        ShowStringCharacters->False],
+       0.,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]}
+   },
+   AutoDelete->False,
+   GridBoxAlignment->{"Columns" -> {{CenterDot}}, "Rows" -> {{CenterDot}}},
+   GridBoxBackground->{"Columns" -> {{
+        RGBColor[1, 1, 0.85]}}},
+   GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{
+  3.905877440523149*^9, 3.9058775403795137`*^9, {3.905877588167997*^9, 
+   3.9058776355585938`*^9}},
+ CellLabel->
+  "Out[695]=",ExpressionUUID->"da9ac8a5-5e8d-4926-a159-f1e554c7b77d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"totalSats", "=", " ", 
+  RowBox[{"Total", "[", "\[IndentingNewLine]", 
+   RowBox[{"Table", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"210000", "*", " ", 
+      RowBox[{"BitShiftRight", "[", 
+       RowBox[{"coinbase", ",", "x"}], "]"}]}], "\[IndentingNewLine]", ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "34"}], "}"}]}], "\[IndentingNewLine]", 
+    "]"}], "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.819828582188751*^9, 3.8198285842666483`*^9}, {
+  3.8483607099834843`*^9, 3.8483607571534777`*^9}, {3.8483614360336637`*^9, 
+  3.848361498955453*^9}, {3.8483615417787323`*^9, 3.8483616251733503`*^9}, {
+  3.848361658948526*^9, 3.848361716632012*^9}, {3.848361802036928*^9, 
+  3.848361803995583*^9}, {3.905876533904805*^9, 3.905876559166667*^9}},
+ CellLabel->
+  "In[682]:=",ExpressionUUID->"876bf94b-7ae8-4719-b8df-ae9cd6411e2f"],
+
+Cell[BoxData["2099999997690000"], "Output",
+ CellChangeTimes->{
+  3.905876030035228*^9, 3.90587618786156*^9, {3.90587656033022*^9, 
+   3.905876571107689*^9}, 3.905876730549468*^9, 3.905876787727037*^9, {
+   3.9058768207514553`*^9, 3.9058768658982687`*^9}, {3.905876939892178*^9, 
+   3.905876949910082*^9}, 3.9058770117335587`*^9},
+ CellLabel->
+  "Out[682]=",ExpressionUUID->"fc83038e-612e-46a3-8b2e-22be2f8b6c51"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"totalBitcoin", " ", "=", " ", 
+  RowBox[{"AccountingForm", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"totalSats", " ", "/", " ", "100000000"}], " ", "//", "N"}], ",",
+     "20"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.905876004136338*^9, 3.905876092657434*^9}, {
+   3.905876144016985*^9, 3.905876166346352*^9}, {3.9058762014155293`*^9, 
+   3.905876202563788*^9}, {3.905876244740539*^9, 3.905876247660425*^9}, {
+   3.9058762788237267`*^9, 3.905876294420671*^9}, {3.9058763304888067`*^9, 
+   3.905876372161438*^9}, {3.905876411612712*^9, 3.905876484900317*^9}, 
+   3.90587709866297*^9},
+ CellLabel->
+  "In[696]:=",ExpressionUUID->"b1b917ff-cbb6-4382-9733-4c1f89588c59"],
+
+Cell[BoxData[
+ TagBox[
+  InterpretationBox[
+   StyleBox["\<\"20999999.9769\"\>",
+    ShowStringCharacters->False],
+   2.09999999769*^7,
+   AutoDelete->True],
+  AccountingForm[#, 20]& ]], "Output",
+ CellChangeTimes->{
+  3.905876295219475*^9, {3.905876335693555*^9, 3.905876373048461*^9}, {
+   3.90587641783136*^9, 3.905876485332995*^9}, {3.9058765648467293`*^9, 
+   3.905876571112938*^9}, 3.905876730558564*^9, 3.905876787756393*^9, {
+   3.9058768207870827`*^9, 3.905876865907878*^9}, {3.90587693990172*^9, 
+   3.905876949919827*^9}, 3.9058770117545357`*^9, 3.9058777126268787`*^9},
+ CellLabel->
+  "Out[696]//AccountingForm=",ExpressionUUID->"85210719-deed-4c22-b4f7-\
+b17f44d9265a"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1234, 1257},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"13.2 for Mac OS X ARM (64-bit) (November 18, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"642e3349-26a5-46fa-8983-00400be80968"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 150, 3, 123, "Title",ExpressionUUID->"d3fc32c0-7235-4fef-8d39-35f7fafe3bd1"],
+Cell[736, 27, 495, 13, 44, "Text",ExpressionUUID->"d123944f-1a8f-4483-a35d-fc95f7195058"],
+Cell[1234, 42, 414, 8, 37, "Input",ExpressionUUID->"bd6d855f-dc8e-4bc1-ab09-babf0c6724e1"],
+Cell[CellGroupData[{
+Cell[1673, 54, 196, 3, 56, "Subsubsection",ExpressionUUID->"0bd561b9-96a1-4c26-993e-941f96b42bef"],
+Cell[CellGroupData[{
+Cell[1894, 61, 242, 5, 37, "Input",ExpressionUUID->"38cf49e8-72aa-4983-be7c-f3d8a25598da"],
+Cell[2139, 68, 567, 15, 60, "Output",ExpressionUUID->"85f7b43c-f13e-40a3-b11f-d93c89fb7d8c"]
+}, Open  ]],
+Cell[2721, 86, 411, 12, 44, "Text",ExpressionUUID->"7eabeaa3-bdc6-4af8-85d4-ddf85f6390fb"],
+Cell[3135, 100, 629, 16, 102, "Text",ExpressionUUID->"011bc30c-62f6-4209-bdbc-1a151afed268"],
+Cell[CellGroupData[{
+Cell[3789, 120, 4855, 95, 688, "Input",ExpressionUUID->"5ce24af2-bc30-42ff-b699-62b246091783"],
+Cell[8647, 217, 22805, 830, 869, "Output",ExpressionUUID->"da9ac8a5-5e8d-4926-a159-f1e554c7b77d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31489, 1052, 900, 17, 168, "Input",ExpressionUUID->"876bf94b-7ae8-4719-b8df-ae9cd6411e2f"],
+Cell[32392, 1071, 413, 7, 42, "Output",ExpressionUUID->"fc83038e-612e-46a3-8b2e-22be2f8b6c51"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32842, 1083, 696, 14, 37, "Input",ExpressionUUID->"b1b917ff-cbb6-4382-9733-4c1f89588c59"],
+Cell[33541, 1099, 682, 16, 80, "Output",ExpressionUUID->"85210719-deed-4c22-b4f7-b17f44d9265a"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
