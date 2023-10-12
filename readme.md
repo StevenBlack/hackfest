@@ -187,9 +187,9 @@ The bitcoin network strives to generate a new block every 10 minutes.  This is c
 The block time is controlled by the mining difficulty, which is adjusted every 2016 blocks in order to reset the 
 block time to 10 minutes based on mining activity over the previous 2016 blocks.
 
-![alt text](assets/blockchain-pace.png)
+![alt text](assets/blockchain-pace-1.png)
 
-![alt text](assets/blockchain-pace2.png)
+![alt text](assets/blockchain-pace-2.png)
 
 Why is the bitcoin network over 35,000 blocks ahead of its target pace?  Because resetting the mining difficulty 
 adjusts the pace of production, but does not *compensate* for over and under production.  Given the increasing
