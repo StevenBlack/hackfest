@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       161,          7]
-NotebookDataLength[     36145,       1147]
-NotebookOptionsPosition[     34281,       1105]
-NotebookOutlinePosition[     34763,       1124]
-CellTagsIndexPosition[     34720,       1121]
+NotebookDataLength[     50866,       1624]
+NotebookOptionsPosition[     48539,       1574]
+NotebookOutlinePosition[     49021,       1593]
+CellTagsIndexPosition[     48978,       1590]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -48,7 +48,7 @@ Cell[BoxData[
   3.819830441271577*^9, 3.819830453124352*^9}, {3.905876750097878*^9, 
   3.905876771671187*^9}, {3.9058768072944202`*^9, 3.9058768558321877`*^9}},
  CellLabel->
-  "In[679]:=",ExpressionUUID->"bd6d855f-dc8e-4bc1-ab09-babf0c6724e1"],
+  "In[329]:=",ExpressionUUID->"bd6d855f-dc8e-4bc1-ab09-babf0c6724e1"],
 
 Cell[CellGroupData[{
 
@@ -64,7 +64,7 @@ Cell[BoxData[
   RowBox[{"coinbase", ",", "2"}], "]"}]], "Input",
  CellChangeTimes->{{3.819830446824383*^9, 3.8198304473894157`*^9}},
  CellLabel->
-  "In[680]:=",ExpressionUUID->"38cf49e8-72aa-4983-be7c-f3d8a25598da"],
+  "In[330]:=",ExpressionUUID->"38cf49e8-72aa-4983-be7c-f3d8a25598da"],
 
 Cell[BoxData[
  TagBox[
@@ -78,10 +78,12 @@ Cell[BoxData[
  CellChangeTimes->{
   3.905876697316724*^9, 3.9058767305209713`*^9, {3.905876777762638*^9, 
    3.905876787649514*^9}, {3.905876820670199*^9, 3.905876865868658*^9}, {
-   3.9058769398517513`*^9, 3.905876949873859*^9}, 3.90587701170172*^9},
+   3.9058769398517513`*^9, 3.905876949873859*^9}, 3.90587701170172*^9, 
+   3.90612360668047*^9, 3.9061238811848097`*^9, 3.906124111155365*^9, 
+   3.906126438641096*^9},
  CellLabel->
-  "Out[680]//BaseForm=",ExpressionUUID->"85f7b43c-f13e-40a3-b11f-\
-d93c89fb7d8c"]
+  "Out[330]//BaseForm=",ExpressionUUID->"3610b8dc-a736-4dee-8801-\
+c91c55dbcdfd"]
 }, Open  ]],
 
 Cell[TextData[{
@@ -118,73 +120,95 @@ Cell[TextData[{
 
 Cell[CellGroupData[{
 
-Cell[BoxData[
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"issuancetable", " ", "=", " ", 
+   RowBox[{"Table", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"year", "=", 
+       RowBox[{"2008", "+", 
+        RowBox[{"(", 
+         RowBox[{"4", "*", "x"}], ")"}]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"halving", "=", 
+       RowBox[{"x", "+", "1"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"sat", "=", 
+       RowBox[{"BitShiftRight", "[", 
+        RowBox[{"coinbase", ",", "x"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"btc", "=", 
+       RowBox[{"sat", "/", "100000000"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+       "year", ",", "\[IndentingNewLine]", "halving", ",", " ", 
+        "\[IndentingNewLine]", 
+        RowBox[{"AccountingForm", "[", 
+         RowBox[{
+          RowBox[{"btc", " ", "//", "N"}], ",", "8"}], "]"}], ",", " ", 
+        "\[IndentingNewLine]", "sat", ",", " ", "\[IndentingNewLine]", 
+        RowBox[{"BaseForm", "[", 
+         RowBox[{"sat", ",", "2"}], "]"}], ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"NumberForm", "[", 
+          RowBox[{
+           RowBox[{"btc", "*", "210000"}], " ", ",", "5"}], "]"}], "//", 
+         "N"}]}], "\[IndentingNewLine]", "}"}]}], ",", "\[IndentingNewLine]", 
+     
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "33"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{"Grid", "[", "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{"Prepend", "[", "\[IndentingNewLine]", 
-    RowBox[{
-     RowBox[{"Table", "[", "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"year", "=", 
-         RowBox[{"2008", "+", 
-          RowBox[{"(", 
-           RowBox[{"4", "*", "x"}], ")"}]}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"halving", "=", 
-         RowBox[{"x", "+", "1"}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"sat", "=", 
-         RowBox[{"BitShiftRight", "[", 
-          RowBox[{"coinbase", ",", "x"}], "]"}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"btc", "=", 
-         RowBox[{"sat", "/", "100000000"}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"{", "\[IndentingNewLine]", 
-         RowBox[{
-         "year", ",", "\[IndentingNewLine]", "halving", ",", " ", 
-          "\[IndentingNewLine]", 
-          RowBox[{"AccountingForm", "[", 
-           RowBox[{
-            RowBox[{"btc", " ", "//", "N"}], ",", "8"}], "]"}], ",", " ", 
-          "\[IndentingNewLine]", "sat", ",", " ", "\[IndentingNewLine]", 
-          RowBox[{"BaseForm", "[", 
-           RowBox[{"sat", ",", "2"}], "]"}], ",", "\[IndentingNewLine]", 
-          RowBox[{
-           RowBox[{"NumberForm", "[", 
-            RowBox[{
-             RowBox[{"btc", "*", "210000"}], " ", ",", "5"}], "]"}], "//", 
-           "N"}]}], "\[IndentingNewLine]", "}"}]}], ",", 
-       "\[IndentingNewLine]", 
-       RowBox[{"{", 
-        RowBox[{"x", ",", "0", ",", "32"}], "}"}]}], "]"}], ",", 
+    RowBox[{"issuancetable", "\[IndentingNewLine]", ",", 
      RowBox[{"{", "\[IndentingNewLine]", 
       RowBox[{
-      "\"\<Year\>\"", "\[IndentingNewLine]", ",", "\"\<Epoch\>\"", 
-       "\[IndentingNewLine]", ",", " ", 
-       RowBox[{"Column", "[", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{"\"\<Block Reward\>\"", ",", " ", "\"\<(BTC)\>\""}], "}"}], 
-         ",", " ", 
-         RowBox[{"Alignment", "->", "Right"}]}], "]"}], "\[IndentingNewLine]",
+       RowBox[{"Style", "[", 
+        RowBox[{"\"\<Year\>\"", ",", 
+         RowBox[{"FontWeight", "->", "Bold"}]}], "]"}], "\[IndentingNewLine]",
+        ",", 
+       RowBox[{"Style", "[", 
+        RowBox[{"\"\<Epoch\>\"", ",", 
+         RowBox[{"FontWeight", "->", "Bold"}]}], "]"}], "\[IndentingNewLine]",
         ",", " ", 
-       RowBox[{"Column", "[", 
+       RowBox[{"Style", "[", 
         RowBox[{
-         RowBox[{"{", 
-          RowBox[{"\"\<Block Reward\>\"", ",", " ", "\"\<(satoshi)\>\""}], 
-          "}"}], ",", " ", 
-         RowBox[{"Alignment", "->", "Right"}]}], "]"}], "\[IndentingNewLine]",
-        ",", "\"\<Satoshi (in binary)\>\"", "\[IndentingNewLine]", ",", 
-       RowBox[{"Column", "[", 
+         RowBox[{"Column", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"\"\<Block Reward\>\"", ",", " ", "\"\<(BTC)\>\""}], 
+            "}"}], ",", " ", 
+           RowBox[{"Alignment", "->", "Right"}]}], "]"}], ",", 
+         RowBox[{"FontWeight", "->", "Bold"}]}], "]"}], "\[IndentingNewLine]",
+        ",", " ", 
+       RowBox[{"Style", "[", 
         RowBox[{
-         RowBox[{"{", 
-          RowBox[{"\"\<210k blocks\>\"", ",", " ", "\"\<total (BTC)\>\""}], 
-          "}"}], ",", " ", 
-         RowBox[{"Alignment", "->", "Right"}]}], "]"}]}], 
+         RowBox[{"Column", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"\"\<Block Reward\>\"", ",", " ", "\"\<(satoshi)\>\""}], 
+            "}"}], ",", " ", 
+           RowBox[{"Alignment", "->", "Right"}]}], "]"}], ",", 
+         RowBox[{"FontWeight", "->", "Bold"}]}], "]"}], "\[IndentingNewLine]",
+        ",", 
+       RowBox[{"Style", "[", 
+        RowBox[{"\"\<Satoshi (in binary)\>\"", ",", 
+         RowBox[{"FontWeight", "->", "Bold"}]}], "]"}], "\[IndentingNewLine]",
+        ",", 
+       RowBox[{"Style", "[", 
+        RowBox[{
+         RowBox[{"Column", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"\"\<210k blocks\>\"", ",", " ", "\"\<total (BTC)\>\""}], 
+            "}"}], ",", " ", 
+           RowBox[{"Alignment", "->", "Right"}]}], "]"}], ",", 
+         RowBox[{"FontWeight", "->", "Bold"}]}], "]"}]}], 
       "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", "]"}], 
    "\[IndentingNewLine]", ",", 
    RowBox[{"Frame", "\[Rule]", "All"}], ",", " ", 
    RowBox[{"Alignment", "\[Rule]", " ", "CenterDot"}], ",", " ", 
    RowBox[{"Background", "\[Rule]", "LightYellow"}]}], "\[IndentingNewLine]", 
-  "]"}]], "Input",
+  "]"}]}], "Input",
  CellChangeTimes->{{3.819828473477495*^9, 3.8198287361374083`*^9}, {
    3.8198287777062273`*^9, 3.819828791543293*^9}, {3.819828907565586*^9, 
    3.819828940551894*^9}, {3.819829062367836*^9, 3.819829251971373*^9}, {
@@ -214,37 +238,61 @@ Cell[BoxData[
    3.905888067554196*^9}, {3.9058881041290073`*^9, 3.905888113119213*^9}, {
    3.905888623400197*^9, 3.905888653254809*^9}, {3.905888701219623*^9, 
    3.905888701526451*^9}, {3.905888737402516*^9, 3.905888737567254*^9}, {
-   3.9058887772803288`*^9, 3.905888790414794*^9}},
+   3.9058887772803288`*^9, 3.905888790414794*^9}, {3.906123779124199*^9, 
+   3.906123804640007*^9}, {3.9061238401912527`*^9, 3.906123867787466*^9}, {
+   3.906123905520625*^9, 3.9061239551974373`*^9}, {3.906124072907021*^9, 
+   3.906124073235977*^9}},
  CellLabel->
-  "In[791]:=",ExpressionUUID->"5ce24af2-bc30-42ff-b699-62b246091783"],
+  "In[331]:=",ExpressionUUID->"5ce24af2-bc30-42ff-b699-62b246091783"],
 
 Cell[BoxData[
  TagBox[GridBox[{
-    {"\<\"Year\"\>", "\<\"Epoch\"\>", 
-     TagBox[GridBox[{
-        {"\<\"Block Reward\"\>"},
-        {"\<\"(BTC)\"\>"}
-       },
-       DefaultBaseStyle->"Column",
-       GridBoxAlignment->{"Columns" -> {{Right}}},
-       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-      "Column"], 
-     TagBox[GridBox[{
-        {"\<\"Block Reward\"\>"},
-        {"\<\"(satoshi)\"\>"}
-       },
-       DefaultBaseStyle->"Column",
-       GridBoxAlignment->{"Columns" -> {{Right}}},
-       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-      "Column"], "\<\"Satoshi (in binary)\"\>", 
-     TagBox[GridBox[{
-        {"\<\"210k blocks\"\>"},
-        {"\<\"total (BTC)\"\>"}
-       },
-       DefaultBaseStyle->"Column",
-       GridBoxAlignment->{"Columns" -> {{Right}}},
-       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-      "Column"]},
+    {
+     StyleBox["\<\"Year\"\>",
+      StripOnInput->False,
+      FontWeight->Bold], 
+     StyleBox["\<\"Epoch\"\>",
+      StripOnInput->False,
+      FontWeight->Bold], 
+     StyleBox[
+      TagBox[GridBox[{
+         {"\<\"Block Reward\"\>"},
+         {"\<\"(BTC)\"\>"}
+        },
+        DefaultBaseStyle->"Column",
+        GridBoxAlignment->{"Columns" -> {{Right}}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Column"],
+      StripOnInput->False,
+      FontWeight->Bold], 
+     StyleBox[
+      TagBox[GridBox[{
+         {"\<\"Block Reward\"\>"},
+         {"\<\"(satoshi)\"\>"}
+        },
+        DefaultBaseStyle->"Column",
+        GridBoxAlignment->{"Columns" -> {{Right}}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Column"],
+      StripOnInput->False,
+      FontWeight->Bold], 
+     StyleBox["\<\"Satoshi (in binary)\"\>",
+      StripOnInput->False,
+      FontWeight->Bold], 
+     StyleBox[
+      TagBox[GridBox[{
+         {"\<\"210k blocks\"\>"},
+         {"\<\"total (BTC)\"\>"}
+        },
+        DefaultBaseStyle->"Column",
+        GridBoxAlignment->{"Columns" -> {{Right}}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Column"],
+      StripOnInput->False,
+      FontWeight->Bold]},
     {"2008", "1", 
      TagBox[
       InterpretationBox[
@@ -1012,6 +1060,29 @@ Cell[BoxData[
         ShowStringCharacters->False],
        0.0021,
        AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2140", "34", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.\"\>",
+        ShowStringCharacters->False],
+       0.,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "0", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"0\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       0,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.\"\>",
+        ShowStringCharacters->False],
+       0.,
+       AutoDelete->True],
       NumberForm[#, 5]& ]}
    },
    AutoDelete->False,
@@ -1025,9 +1096,12 @@ Cell[BoxData[
   3.905877440523149*^9, 3.9058775403795137`*^9, {3.905877588167997*^9, 
    3.9058776355585938`*^9}, {3.9058880943570623`*^9, 
    3.9058881141219873`*^9}, {3.905888625893467*^9, 3.905888653815098*^9}, 
-   3.905888702885364*^9, 3.9058887381913357`*^9, 3.9058887917353687`*^9},
+   3.905888702885364*^9, 3.9058887381913357`*^9, 3.9058887917353687`*^9, 
+   3.906123606711688*^9, {3.906123792917425*^9, 3.906123805271222*^9}, 
+   3.906123881192919*^9, 3.90612392487595*^9, 3.906123956797687*^9, 
+   3.90612407383351*^9, 3.906124111181923*^9, 3.906126438648834*^9},
  CellLabel->
-  "Out[791]=",ExpressionUUID->"95fe2937-107e-4224-9bae-2036f5cd579b"]
+  "Out[332]=",ExpressionUUID->"866fedbb-c0c3-462d-ad75-2ee328c8a022"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1050,7 +1124,7 @@ Cell[BoxData[
   3.848361803995583*^9}, {3.905876533904805*^9, 3.905876559166667*^9}, {
   3.905888552012053*^9, 3.905888576899231*^9}},
  CellLabel->
-  "In[792]:=",ExpressionUUID->"876bf94b-7ae8-4719-b8df-ae9cd6411e2f"],
+  "In[333]:=",ExpressionUUID->"876bf94b-7ae8-4719-b8df-ae9cd6411e2f"],
 
 Cell[BoxData["2099999997690000"], "Output",
  CellChangeTimes->{
@@ -1058,9 +1132,10 @@ Cell[BoxData["2099999997690000"], "Output",
    3.905876571107689*^9}, 3.905876730549468*^9, 3.905876787727037*^9, {
    3.9058768207514553`*^9, 3.9058768658982687`*^9}, {3.905876939892178*^9, 
    3.905876949910082*^9}, 3.9058770117335587`*^9, {3.905888554967255*^9, 
-   3.90588857754593*^9}, 3.905888995504078*^9},
+   3.90588857754593*^9}, 3.905888995504078*^9, 3.906123606720065*^9, 
+   3.906123881219323*^9, 3.9061241111929703`*^9, 3.9061264386779118`*^9},
  CellLabel->
-  "Out[792]=",ExpressionUUID->"b8356f4c-2e4f-4202-8eb3-64b4840e3ff2"]
+  "Out[333]=",ExpressionUUID->"d14dc864-ae33-4edf-b5f4-cc30664a495b"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1077,9 +1152,9 @@ Cell[BoxData[
    3.905876202563788*^9}, {3.905876244740539*^9, 3.905876247660425*^9}, {
    3.9058762788237267`*^9, 3.905876294420671*^9}, {3.9058763304888067`*^9, 
    3.905876372161438*^9}, {3.905876411612712*^9, 3.905876484900317*^9}, 
-   3.90587709866297*^9},
+   3.90587709866297*^9, {3.906123640192008*^9, 3.906123659807012*^9}},
  CellLabel->
-  "In[793]:=",ExpressionUUID->"b1b917ff-cbb6-4382-9733-4c1f89588c59"],
+  "In[334]:=",ExpressionUUID->"b1b917ff-cbb6-4382-9733-4c1f89588c59"],
 
 Cell[BoxData[
  TagBox[
@@ -1095,10 +1170,404 @@ Cell[BoxData[
    3.905876571112938*^9}, 3.905876730558564*^9, 3.905876787756393*^9, {
    3.9058768207870827`*^9, 3.905876865907878*^9}, {3.90587693990172*^9, 
    3.905876949919827*^9}, 3.9058770117545357`*^9, 3.9058777126268787`*^9, 
-   3.90588899856443*^9},
+   3.90588899856443*^9, 3.906123606745893*^9, {3.906123642110373*^9, 
+   3.906123660787237*^9}, 3.9061238812248507`*^9, 3.906124111216213*^9, 
+   3.906126438697494*^9},
  CellLabel->
-  "Out[793]//AccountingForm=",ExpressionUUID->"11573d24-f7e2-46ef-ad64-\
-a1b3622c51ca"]
+  "Out[334]//AccountingForm=",ExpressionUUID->"ebf20ae0-782b-47ea-bbb4-\
+08b1fdee920e"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Let's show just the last 10-rows, for clarity", "Subsubsection",
+ CellChangeTimes->{{3.906123354854577*^9, 3.9061233654500437`*^9}, 
+   3.9061235932603807`*^9, {3.906126601779234*^9, 
+   3.9061266279869337`*^9}},ExpressionUUID->"f19ab842-ebb1-401d-a2b8-\
+bfd798b94ed0"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"tablebottom", " ", "=", " ", 
+   RowBox[{"Take", "[", 
+    RowBox[{"issuancetable", ",", 
+     RowBox[{"-", "10"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.906123354854577*^9, 3.9061233654500437`*^9}, 
+   3.9061235932603807`*^9, 
+   3.906126601779234*^9},ExpressionUUID->"29a603eb-925d-455c-8c7b-\
+2c2c550ba700"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Grid", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Prepend", "[", "\[IndentingNewLine]", 
+    RowBox[{"tablebottom", ",", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Style", "[", 
+        RowBox[{"\"\<Year\>\"", ",", 
+         RowBox[{"FontWeight", "->", "Bold"}]}], "]"}], "\[IndentingNewLine]",
+        ",", 
+       RowBox[{"Style", "[", 
+        RowBox[{"\"\<Epoch\>\"", ",", 
+         RowBox[{"FontWeight", "->", "Bold"}]}], "]"}], "\[IndentingNewLine]",
+        ",", " ", 
+       RowBox[{"Style", "[", 
+        RowBox[{
+         RowBox[{"Column", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"\"\<Block Reward\>\"", ",", " ", "\"\<(BTC)\>\""}], 
+            "}"}], ",", " ", 
+           RowBox[{"Alignment", "->", "Right"}]}], "]"}], ",", 
+         RowBox[{"FontWeight", "->", "Bold"}]}], "]"}], "\[IndentingNewLine]",
+        ",", " ", 
+       RowBox[{"Style", "[", 
+        RowBox[{
+         RowBox[{"Column", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<Block\>\"", ",", "\"\<Reward\>\"", ",", " ", 
+             "\"\<(sats)\>\""}], "}"}], ",", " ", 
+           RowBox[{"Alignment", "->", "Right"}]}], "]"}], ",", 
+         RowBox[{"FontWeight", "->", "Bold"}]}], "]"}], "\[IndentingNewLine]",
+        ",", 
+       RowBox[{"Style", "[", 
+        RowBox[{
+         RowBox[{"Column", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"\"\<Satoshi\>\"", ",", "\"\<(in binary)\>\""}], "}"}], 
+           ",", " ", 
+           RowBox[{"Alignment", "->", "Right"}]}], "]"}], ",", 
+         RowBox[{"FontWeight", "->", "Bold"}]}], "]"}], "\[IndentingNewLine]",
+        ",", 
+       RowBox[{"Style", "[", 
+        RowBox[{
+         RowBox[{"Column", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"\"\<210k blocks\>\"", ",", " ", "\"\<total (BTC)\>\""}], 
+            "}"}], ",", " ", 
+           RowBox[{"Alignment", "->", "Right"}]}], "]"}], ",", 
+         RowBox[{"FontWeight", "->", "Bold"}]}], "]"}]}], 
+      "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", "]"}], 
+   "\[IndentingNewLine]", ",", 
+   RowBox[{"Frame", "\[Rule]", "All"}], ",", " ", 
+   RowBox[{"Alignment", "\[Rule]", " ", "CenterDot"}], ",", " ", 
+   RowBox[{"Background", "\[Rule]", "LightYellow"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.90612340687915*^9, 3.9061234094712048`*^9}, {
+  3.90612344998903*^9, 3.906123452160454*^9}, {3.906123503838872*^9, 
+  3.906123557740775*^9}, {3.906123990796136*^9, 3.906124012826785*^9}},
+ CellLabel->
+  "In[336]:=",ExpressionUUID->"a809bc56-d5df-4a3c-bcf6-1e56a712b98a"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     StyleBox["\<\"Year\"\>",
+      StripOnInput->False,
+      FontWeight->Bold], 
+     StyleBox["\<\"Epoch\"\>",
+      StripOnInput->False,
+      FontWeight->Bold], 
+     StyleBox[
+      TagBox[GridBox[{
+         {"\<\"Block Reward\"\>"},
+         {"\<\"(BTC)\"\>"}
+        },
+        DefaultBaseStyle->"Column",
+        GridBoxAlignment->{"Columns" -> {{Right}}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Column"],
+      StripOnInput->False,
+      FontWeight->Bold], 
+     StyleBox[
+      TagBox[GridBox[{
+         {"\<\"Block\"\>"},
+         {"\<\"Reward\"\>"},
+         {"\<\"(sats)\"\>"}
+        },
+        DefaultBaseStyle->"Column",
+        GridBoxAlignment->{"Columns" -> {{Right}}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Column"],
+      StripOnInput->False,
+      FontWeight->Bold], 
+     StyleBox[
+      TagBox[GridBox[{
+         {"\<\"Satoshi\"\>"},
+         {"\<\"(in binary)\"\>"}
+        },
+        DefaultBaseStyle->"Column",
+        GridBoxAlignment->{"Columns" -> {{Right}}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Column"],
+      StripOnInput->False,
+      FontWeight->Bold], 
+     StyleBox[
+      TagBox[GridBox[{
+         {"\<\"210k blocks\"\>"},
+         {"\<\"total (BTC)\"\>"}
+        },
+        DefaultBaseStyle->"Column",
+        GridBoxAlignment->{"Columns" -> {{Right}}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Column"],
+      StripOnInput->False,
+      FontWeight->Bold]},
+    {"2104", "25", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00000298\"\>",
+        ShowStringCharacters->False],
+       2.98*^-6,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "298", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"100101010\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       298,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.6258\"\>",
+        ShowStringCharacters->False],
+       0.6258,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2108", "26", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00000149\"\>",
+        ShowStringCharacters->False],
+       1.49*^-6,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "149", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"10010101\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       149,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.3129\"\>",
+        ShowStringCharacters->False],
+       0.3129,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2112", "27", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00000074\"\>",
+        ShowStringCharacters->False],
+       7.4*^-7,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "74", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"1001010\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       74,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.1554\"\>",
+        ShowStringCharacters->False],
+       0.1554,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2116", "28", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00000037\"\>",
+        ShowStringCharacters->False],
+       3.7*^-7,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "37", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"100101\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       37,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.0777\"\>",
+        ShowStringCharacters->False],
+       0.0777,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2120", "29", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00000018\"\>",
+        ShowStringCharacters->False],
+       1.8*^-7,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "18", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"10010\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       18,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.0378\"\>",
+        ShowStringCharacters->False],
+       0.0378,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2124", "30", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00000009\"\>",
+        ShowStringCharacters->False],
+       9.*^-8,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "9", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"1001\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       9,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.0189\"\>",
+        ShowStringCharacters->False],
+       0.0189,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2128", "31", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00000004\"\>",
+        ShowStringCharacters->False],
+       4.*^-8,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "4", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"100\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       4,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.0084\"\>",
+        ShowStringCharacters->False],
+       0.0084,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2132", "32", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00000002\"\>",
+        ShowStringCharacters->False],
+       2.*^-8,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "2", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"10\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       2,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.0042\"\>",
+        ShowStringCharacters->False],
+       0.0042,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2136", "33", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.00000001\"\>",
+        ShowStringCharacters->False],
+       1.*^-8,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "1", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"1\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       1,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.0021\"\>",
+        ShowStringCharacters->False],
+       0.0021,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]},
+    {"2140", "34", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.\"\>",
+        ShowStringCharacters->False],
+       0.,
+       AutoDelete->True],
+      AccountingForm[#, 8]& ], "0", 
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"0\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       0,
+       Editable->False],
+      BaseForm[#, 2]& ], 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.\"\>",
+        ShowStringCharacters->False],
+       0.,
+       AutoDelete->True],
+      NumberForm[#, 5]& ]}
+   },
+   AutoDelete->False,
+   GridBoxAlignment->{"Columns" -> {{CenterDot}}, "Rows" -> {{CenterDot}}},
+   GridBoxBackground->{"Columns" -> {{
+        RGBColor[1, 1, 0.85]}}},
+   GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{{3.906123546280307*^9, 3.906123558521937*^9}, 
+   3.906123606772274*^9, 3.906123881250907*^9, 3.906124014266406*^9, 
+   3.906124051573595*^9, 3.906124111239875*^9, 3.906126438720347*^9},
+ CellLabel->
+  "Out[336]=",ExpressionUUID->"732eebfa-65df-4abc-bb42-b8c3667ca883"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -1131,21 +1600,29 @@ Cell[CellGroupData[{
 Cell[1673, 54, 196, 3, 56, "Subsubsection",ExpressionUUID->"0bd561b9-96a1-4c26-993e-941f96b42bef"],
 Cell[CellGroupData[{
 Cell[1894, 61, 242, 5, 37, "Input",ExpressionUUID->"38cf49e8-72aa-4983-be7c-f3d8a25598da"],
-Cell[2139, 68, 567, 15, 60, "Output",ExpressionUUID->"85f7b43c-f13e-40a3-b11f-d93c89fb7d8c"]
+Cell[2139, 68, 664, 17, 60, "Output",ExpressionUUID->"3610b8dc-a736-4dee-8801-c91c55dbcdfd"]
 }, Open  ]],
-Cell[2721, 86, 411, 12, 44, "Text",ExpressionUUID->"7eabeaa3-bdc6-4af8-85d4-ddf85f6390fb"],
-Cell[3135, 100, 629, 16, 102, "Text",ExpressionUUID->"011bc30c-62f6-4209-bdbc-1a151afed268"],
+Cell[2818, 88, 411, 12, 44, "Text",ExpressionUUID->"7eabeaa3-bdc6-4af8-85d4-ddf85f6390fb"],
+Cell[3232, 102, 629, 16, 102, "Text",ExpressionUUID->"011bc30c-62f6-4209-bdbc-1a151afed268"],
 Cell[CellGroupData[{
-Cell[3789, 120, 5134, 98, 688, "Input",ExpressionUUID->"5ce24af2-bc30-42ff-b699-62b246091783"],
-Cell[8926, 220, 22399, 809, 867, "Output",ExpressionUUID->"95fe2937-107e-4224-9bae-2036f5cd579b"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[31362, 1034, 949, 18, 168, "Input",ExpressionUUID->"876bf94b-7ae8-4719-b8df-ae9cd6411e2f"],
-Cell[32314, 1054, 484, 8, 42, "Output",ExpressionUUID->"b8356f4c-2e4f-4202-8eb3-64b4840e3ff2"]
+Cell[3886, 122, 6100, 123, 740, "Input",ExpressionUUID->"5ce24af2-bc30-42ff-b699-62b246091783"],
+Cell[9989, 247, 23638, 856, 871, "Output",ExpressionUUID->"866fedbb-c0c3-462d-ad75-2ee328c8a022"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[32835, 1067, 696, 14, 37, "Input",ExpressionUUID->"b1b917ff-cbb6-4382-9733-4c1f89588c59"],
-Cell[33534, 1083, 707, 17, 60, "Output",ExpressionUUID->"11573d24-f7e2-46ef-ad64-a1b3622c51ca"]
+Cell[33664, 1108, 949, 18, 168, "Input",ExpressionUUID->"876bf94b-7ae8-4719-b8df-ae9cd6411e2f"],
+Cell[34616, 1128, 580, 9, 42, "Output",ExpressionUUID->"d14dc864-ae33-4edf-b5f4-cc30664a495b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35233, 1142, 742, 14, 37, "Input",ExpressionUUID->"b1b917ff-cbb6-4382-9733-4c1f89588c59"],
+Cell[35978, 1158, 851, 19, 60, "Output",ExpressionUUID->"ebf20ae0-782b-47ea-bbb4-08b1fdee920e"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36878, 1183, 275, 4, 56, "Subsubsection",ExpressionUUID->"f19ab842-ebb1-401d-a2b8-bfd798b94ed0"],
+Cell[37156, 1189, 357, 9, 37, "Input",ExpressionUUID->"29a603eb-925d-455c-8c7b-2c2c550ba700"],
+Cell[CellGroupData[{
+Cell[37538, 1202, 2690, 65, 350, "Input",ExpressionUUID->"a809bc56-d5df-4a3c-bcf6-1e56a712b98a"],
+Cell[40231, 1269, 8268, 300, 325, "Output",ExpressionUUID->"732eebfa-65df-4abc-bb42-b8c3667ca883"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
