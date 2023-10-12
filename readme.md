@@ -13,12 +13,12 @@ technical facets. In 45 minutes or less.
 
 ## Session outline
 
-1. [Introduction](#Introduction)
-1. [Epistemology of Bitcoin (some high level conclusions)](#link-to-come)
-1. [BTC, satoshis, and unit bias](#link-to-come)
-1. [Hashing, blocks, proof of work, and mining](#link-to-come)
-1. [Bitcoin's heartbeat: Block time, mining difficulty, and mining difficulty adjustments](#link-to-come)
-1. [Halving and issuance](#link-to-come)
+1. [Introduction](#introduction)
+1. [Epistemology of Bitcoin (some high level conclusions)](#epistemology-of-bitcoin-some-high-level-conclusions)
+1. [BTC, satoshis, and unit bias](#btc-satoshis-and-unit-bias)
+1. [Hashing, blocks, proof of work, and mining](#hashing-blocks-proof-of-work-and-mining)
+1. [Bitcoin's heartbeat: Block time, mining difficulty, and mining difficulty adjustments](#bitcoins-heartbeat-block-time-mining-difficulty-and-mining-difficulty-adjustments)
+1. [Halving and issuance](#halving-and-issuance)
 
 ### Introduction
 
