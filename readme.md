@@ -181,3 +181,6 @@ These are links to things I referenced during the presentation.
 
 - [Clark Moody Bitcoin Dashboard](https://bitcoin.clarkmoody.com/dashboard/)
 
+- [Mempool.space](https://mempool.space/) (a block explorer and mempool visualizer)
+
+- [Transaction Street](https://txstreet.com/v/eth-btc) (a block explorer and mempool visualizer that's just, well, cool)
