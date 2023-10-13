@@ -1,7 +1,7 @@
 # Hackfest 2023
 
 These are the notes for my [Hackfest 2023](https://hackfest.ca/) presentation on
-October 12 2023 in Lévis, Québec.
+Friday October 13 2023 in Lévis, Québec.
 
 The topic is presented in French. The title of the presentaton is
 "***Bitcoin: Cool et pas à peu près***" which is colloquial French for
