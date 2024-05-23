@@ -1,15 +1,14 @@
 # Hackfest 2023
 
-These are the notes for my [Hackfest 2023](https://hackfest.ca/) presentation on
+These are notes from my [Hackfest 2023](https://hackfest.ca/) presentation on
 Friday October 13 2023 in Lévis, Québec.
 
 The topic is presented in French. The title of the presentaton is
 "***Bitcoin: Cool et pas à peu près***" which is colloquial French for
-"***Bitcoin: Cool and not nearly***".  Which means, in essence,
 *Bitcoin is pretty cool*.
 
-The aim of the session is to explain Bitcoin while highlighting its cooler
-technical facets. In 45 minutes or less.
+The session's aim is to explain Bitcoin while highlighting some of its 
+cooler technical facets. In 45 minutes or less.
 
 ## Session outline
 
@@ -23,27 +22,25 @@ technical facets. In 45 minutes or less.
 ### Introduction
 
 Here I extemporaneously explain who I am, why I'm here, and what I'm going to
-talk about. You had to be there.
+cover. You had to be there.
 
 ### Epistemology of Bitcoin (some high level conclusions)
 
-Why is it so hard to explaining Bitcoin sometimes hard? Understanding Bitcoin
-certainly has a learning curve.
+Why is explaining Bitcoin hard? Understanding Bitcoin certainly has a learning curve.
 
-It feels like understanding Bitcoin requires a certain *activation energy*, with an
-elevated  "hump" that dissuades many people from fully understanding it initially.
+It's like understanding Bitcoin requires an *activation energy*, with an
+elevated cognitive "hump" that dissuades many people from fully understanding it initially.
 
-It's like an endothermic reaction in chemistry, where there's typically an energy
-hump that needs to be overcome before the reaction can proceed.
+It's like an endothermic reaction in chemistry, with its energy
+hump to overcome before the reaction can proceed.
 
 ![Activation energy](assets/endothermic-reaction.png)
 
-The other thing about explaining Bitcoin is that it's a broad subject with orthogonal
-facets.  Explaining Bitcoin involves explaining disparate things that are
-***related***, but ***not correlated**.  This makes it hard to know where to start.
-An obvious linear and logical narrative doesn't appear to exist.  One finds oneself
-having to circle back to the beginning to introduce a new primitive concept, then
-moving forward with the combined abstractions, again and again.
+Bitcoin is a broad subject composed of several orthogonal facets.  Explaining 
+Bitcoin involves explaining disparate things that are ***related***, 
+but ***not correlated***.  It's hard to know where to start.
+An obvious linear and logical narrative doesn't appear to exist.  I always seem
+to be repeatedly circling back to introduce new primitive concepts.
 
 **Explaining Bitcoin sometimes feels like a Tarantino movie**, where the story is
 told in a non-linear fashion.
@@ -51,19 +48,20 @@ told in a non-linear fashion.
 | ![alt text](assets/pulp-fiction.jpg) |  ![alt text](assets/kill-bill.jpg)    |
 | ---- | ---- |
 
+There has to be a logical and systematic way to explain Bitcoin. 
+
 #### Analyzing Bitcoin subject matter
 
 Here we try to picture and resolve why Bitcoin is so hard to explain.  We start by
 picking 21 facets to be explained. We could have picked 40 facets, but 21 is ample
 for now.
 
-If we list Bitcoin's salient subjects, and cross-reference among them for prerequisite
-relationships, we get a table that looks like this.
+If we list Bitcoin's salient subjects, and cross-reference among them for 
+prerequisite relationships, we get a table that looks like this.
 
 ![Base concepts and their prereqisite relationships](assets/base-concepts-related.png)
 
-**All matrices can be represented as a graph network**. Here's the graph network of these prerequisite relationships. What a mess! Where to start
-to explain Bitcoin in a coherent way?
+**All matrices can be represented as a graph network**. Here's the graph network of these prerequisite relationships. What a mess! Let's try to make sense of this.
 
 ![Base concepts and their prereqisite relationships](assets/base-concepts-graph-1.png)
 
@@ -91,7 +89,7 @@ simpler subjects that partially unlock the greatest number most complex subjects
 | ---- | ---- | ---- |
 | ![alt text](assets/scores-prerequisites.png) | ![alt text](assets/scores-complexities.png) | ![alt text](assets/scores-prerequisites-complexities.png) |
 
-So let's run in that order, more or less.
+So let's run in that order, and see how it goes.
 
 ### BTC, satoshis, and unit bias
 
